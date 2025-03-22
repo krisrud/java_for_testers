@@ -1,1 +1,1 @@
-# java_for_testers study proj
+# java_for_testers

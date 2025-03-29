@@ -6,9 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e4c41ccf-6b28-4041-b37f-db121a9e5d61" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/stqa/geometry/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/stqa/geometry/Rectangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/stqa/geometry/Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/stqa/geometry/Triangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/stqa/geometry/TriangleTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/stqa/geometry/TriangleTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/stqa/geometry/RectangleTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/stqa/geometry/RectangleTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/stqa/geometry/SquareTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/stqa/geometry/SquareTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +43,11 @@
     "Gradle.TriangleTests.executor": "Run",
     "Gradle.sandbox [:ru.stqa.geometry.Geometry.main()].executor": "Run",
     "JUnit.RectangleTests.executor": "Run",
+    "JUnit.RectangleTests.testEquality2.executor": "Run",
     "JUnit.SquareTests.executor": "Run",
+    "JUnit.SquareTests.testEquality.executor": "Run",
+    "JUnit.SquareTests.testEquality2.executor": "Run",
+    "JUnit.SquareTests.testNonEquality.executor": "Run",
     "JUnit.TriangleTests.cannotCreateTriangleWithNegativeSide.executor": "Run",
     "JUnit.TriangleTests.complianceWithTriangleInequality.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
@@ -54,32 +57,8 @@
     "last_opened_file_path": "/home/kristina/Рабочий стол/study/java4testers/java_for_testers/sandbox"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.TriangleTests.complianceWithTriangleInequality">
-    <configuration name="TriangleTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;ru.stqa.geometry.TriangleTests&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="RectangleTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.RectangleTests.testEquality">
+    <configuration name="RectangleTests.testEquality" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sandbox.test" />
       <extension name="coverage">
         <pattern>
@@ -89,12 +68,29 @@
       </extension>
       <option name="PACKAGE_NAME" value="ru.stqa.geometry" />
       <option name="MAIN_CLASS_NAME" value="ru.stqa.geometry.RectangleTests" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="testEquality" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SquareTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RectangleTests.testEquality2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sandbox.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.stqa.geometry.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.stqa.geometry" />
+      <option name="MAIN_CLASS_NAME" value="ru.stqa.geometry.RectangleTests" />
+      <option name="METHOD_NAME" value="testEquality2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SquareTests.testEquality" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sandbox.test" />
       <extension name="coverage">
         <pattern>
@@ -104,28 +100,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="ru.stqa.geometry" />
       <option name="MAIN_CLASS_NAME" value="ru.stqa.geometry.SquareTests" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TriangleTests.cannotCreateTriangleWithNegativeSide" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="sandbox.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.stqa.geometry.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.stqa.geometry" />
-      <option name="MAIN_CLASS_NAME" value="ru.stqa.geometry.TriangleTests" />
-      <option name="METHOD_NAME" value="cannotCreateTriangleWithNegativeSide" />
+      <option name="METHOD_NAME" value="testEquality" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TriangleTests.complianceWithTriangleInequality" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SquareTests.testEquality2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sandbox.test" />
       <extension name="coverage">
         <pattern>
@@ -134,8 +115,24 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.stqa.geometry" />
-      <option name="MAIN_CLASS_NAME" value="ru.stqa.geometry.TriangleTests" />
-      <option name="METHOD_NAME" value="complianceWithTriangleInequality" />
+      <option name="MAIN_CLASS_NAME" value="ru.stqa.geometry.SquareTests" />
+      <option name="METHOD_NAME" value="testEquality2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SquareTests.testNonEquality" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sandbox.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.stqa.geometry.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.stqa.geometry" />
+      <option name="MAIN_CLASS_NAME" value="ru.stqa.geometry.SquareTests" />
+      <option name="METHOD_NAME" value="testNonEquality" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -143,11 +140,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TriangleTests.complianceWithTriangleInequality" />
-        <item itemvalue="JUnit.TriangleTests.cannotCreateTriangleWithNegativeSide" />
-        <item itemvalue="JUnit.RectangleTests" />
-        <item itemvalue="JUnit.SquareTests" />
-        <item itemvalue="Gradle.TriangleTests" />
+        <item itemvalue="JUnit.RectangleTests.testEquality" />
+        <item itemvalue="JUnit.RectangleTests.testEquality2" />
+        <item itemvalue="JUnit.SquareTests.testEquality2" />
+        <item itemvalue="JUnit.SquareTests.testNonEquality" />
+        <item itemvalue="JUnit.SquareTests.testEquality" />
       </list>
     </recent_temporary>
   </component>

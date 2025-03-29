@@ -38,4 +38,18 @@ public class TriangleTests {
         Assertions.assertEquals("сумма двух любых сторон должна быть не меньше третьей стороны", thrown.getMessage());
 
     }
+
+    @Test
+    void testEquality() {
+        var r1 = new Triangle(5.0, 4.0, 3.0);
+        var r2 = new Triangle(5.0, 4.0, 3.0);
+        Assertions.assertEquals(r1, r2);
+    }
+
+    @Test
+    void testEquality2() {
+        var r1 = new Triangle(5.0, 4.0, 3.0);
+        var r2 = new Triangle(3.0, 4.0, 5.0);
+        Assertions.assertEquals(r1, r2);
+    }
 }

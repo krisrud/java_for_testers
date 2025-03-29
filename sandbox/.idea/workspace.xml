@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e4c41ccf-6b28-4041-b37f-db121a9e5d61" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/stqa/geometry/RectangleTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/stqa/geometry/RectangleTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/stqa/geometry/SquareTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/stqa/geometry/SquareTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/stqa/geometry/Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/stqa/geometry/Triangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/stqa/geometry/TriangleTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/stqa/geometry/TriangleTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,13 +43,19 @@
     "Gradle.TriangleTests.executor": "Run",
     "Gradle.sandbox [:ru.stqa.geometry.Geometry.main()].executor": "Run",
     "JUnit.RectangleTests.executor": "Run",
+    "JUnit.RectangleTests.testEquality.executor": "Run",
     "JUnit.RectangleTests.testEquality2.executor": "Run",
     "JUnit.SquareTests.executor": "Run",
     "JUnit.SquareTests.testEquality.executor": "Run",
     "JUnit.SquareTests.testEquality2.executor": "Run",
     "JUnit.SquareTests.testNonEquality.executor": "Run",
+    "JUnit.TriangleTests.canCalculateArea.executor": "Run",
+    "JUnit.TriangleTests.canCalculatePerimeter.executor": "Run",
     "JUnit.TriangleTests.cannotCreateTriangleWithNegativeSide.executor": "Run",
     "JUnit.TriangleTests.complianceWithTriangleInequality.executor": "Run",
+    "JUnit.TriangleTests.executor": "Run",
+    "JUnit.TriangleTests.testEquality.executor": "Run",
+    "JUnit.TriangleTests.testEquality2.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -57,8 +63,8 @@
     "last_opened_file_path": "/home/kristina/Рабочий стол/study/java4testers/java_for_testers/sandbox"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.RectangleTests.testEquality">
-    <configuration name="RectangleTests.testEquality" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.TriangleTests.testEquality2">
+    <configuration name="TriangleTests.canCalculateArea" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sandbox.test" />
       <extension name="coverage">
         <pattern>
@@ -67,14 +73,62 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.stqa.geometry" />
-      <option name="MAIN_CLASS_NAME" value="ru.stqa.geometry.RectangleTests" />
+      <option name="MAIN_CLASS_NAME" value="ru.stqa.geometry.TriangleTests" />
+      <option name="METHOD_NAME" value="canCalculateArea" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TriangleTests.canCalculatePerimeter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sandbox.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.stqa.geometry.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.stqa.geometry" />
+      <option name="MAIN_CLASS_NAME" value="ru.stqa.geometry.TriangleTests" />
+      <option name="METHOD_NAME" value="canCalculatePerimeter" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TriangleTests.cannotCreateTriangleWithNegativeSide" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sandbox.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.stqa.geometry.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.stqa.geometry" />
+      <option name="MAIN_CLASS_NAME" value="ru.stqa.geometry.TriangleTests" />
+      <option name="METHOD_NAME" value="cannotCreateTriangleWithNegativeSide" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TriangleTests.testEquality" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sandbox.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.stqa.geometry.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.stqa.geometry" />
+      <option name="MAIN_CLASS_NAME" value="ru.stqa.geometry.TriangleTests" />
       <option name="METHOD_NAME" value="testEquality" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RectangleTests.testEquality2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TriangleTests.testEquality2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sandbox.test" />
       <extension name="coverage">
         <pattern>
@@ -83,56 +137,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.stqa.geometry" />
-      <option name="MAIN_CLASS_NAME" value="ru.stqa.geometry.RectangleTests" />
+      <option name="MAIN_CLASS_NAME" value="ru.stqa.geometry.TriangleTests" />
       <option name="METHOD_NAME" value="testEquality2" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SquareTests.testEquality" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="sandbox.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.stqa.geometry.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.stqa.geometry" />
-      <option name="MAIN_CLASS_NAME" value="ru.stqa.geometry.SquareTests" />
-      <option name="METHOD_NAME" value="testEquality" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SquareTests.testEquality2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="sandbox.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.stqa.geometry.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.stqa.geometry" />
-      <option name="MAIN_CLASS_NAME" value="ru.stqa.geometry.SquareTests" />
-      <option name="METHOD_NAME" value="testEquality2" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SquareTests.testNonEquality" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="sandbox.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.stqa.geometry.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.stqa.geometry" />
-      <option name="MAIN_CLASS_NAME" value="ru.stqa.geometry.SquareTests" />
-      <option name="METHOD_NAME" value="testNonEquality" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -140,11 +146,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.RectangleTests.testEquality" />
-        <item itemvalue="JUnit.RectangleTests.testEquality2" />
-        <item itemvalue="JUnit.SquareTests.testEquality2" />
-        <item itemvalue="JUnit.SquareTests.testNonEquality" />
-        <item itemvalue="JUnit.SquareTests.testEquality" />
+        <item itemvalue="JUnit.TriangleTests.testEquality2" />
+        <item itemvalue="JUnit.TriangleTests.testEquality" />
+        <item itemvalue="JUnit.TriangleTests.cannotCreateTriangleWithNegativeSide" />
+        <item itemvalue="JUnit.TriangleTests.canCalculatePerimeter" />
+        <item itemvalue="JUnit.TriangleTests.canCalculateArea" />
       </list>
     </recent_temporary>
   </component>

@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.Dimension;
@@ -27,9 +28,14 @@ public class GroupCreationTests {
   JavascriptExecutor js;
   @BeforeEach
   public void setUp() {
-    driver = new FirefoxDriver();
+    //driver = new FirefoxDriver();
+
+    var options = new FirefoxOptions();
+    options.setBinary("/home/kristina/firefox");
+    driver = new FirefoxDriver(options);
     js = (JavascriptExecutor) driver;
     vars = new HashMap<String, Object>();
+
   }
   @AfterEach
   public void tearDown() {

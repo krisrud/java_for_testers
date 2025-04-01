@@ -3,6 +3,7 @@ package ru.stqa.geometry;
 import java.util.Objects;
 
 import static java.lang.Math.sqrt;
+import java.util.Arrays;
 
 public record Triangle(double a, double b, double c) {
 
@@ -10,10 +11,15 @@ public record Triangle(double a, double b, double c) {
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         Triangle triangle = (Triangle) o;
-        return Double.compare(a, triangle.a) == 0 && Double.compare(b, triangle.b) == 0 && Double.compare(c, triangle.c) == 0
+       /* return Double.compare(a, triangle.a) == 0 && Double.compare(b, triangle.b) == 0 && Double.compare(c, triangle.c) == 0
                 || Double.compare(b, triangle.a) == 0 && Double.compare(a, triangle.b) == 0 && Double.compare(c, triangle.c) == 0
                 || Double.compare(c, triangle.a) == 0 && Double.compare(b, triangle.b) == 0 && Double.compare(a, triangle.c) == 0
-                || Double.compare(a, triangle.a) == 0 && Double.compare(c, triangle.b) == 0 && Double.compare(b, triangle.c) == 0;
+                || Double.compare(a, triangle.a) == 0 && Double.compare(c, triangle.b) == 0 && Double.compare(b, triangle.c) == 0;*/
+        double[] triangle1 = {a, b, c};
+        double[] triangle2 = {triangle.a, triangle.b, triangle.c};
+        Arrays.sort(triangle1);
+        Arrays.sort(triangle2);
+        return Arrays.equals(triangle1, triangle2);
     }
 
     @Override

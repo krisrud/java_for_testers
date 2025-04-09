@@ -1,3 +1,4 @@
+package tests;
 
 import manager.ApplicationManager;
 import model.GroupData;

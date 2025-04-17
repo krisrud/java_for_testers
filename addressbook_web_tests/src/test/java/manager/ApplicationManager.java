@@ -1,6 +1,10 @@
 package manager;
 
 import org.openqa.selenium.*;
+import org.openqa.selenium.chromium.ChromiumDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chromium.ChromiumOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
@@ -9,11 +13,20 @@ public class ApplicationManager {
     private LoginHelper session;
     private GroupHelper groups;
 
-    public void init() {
+    public void init(String browser) {
         if (driver == null) {
-            var options = new FirefoxOptions();
-            options.setBinary("/home/kristina/firefox");
-            driver = new FirefoxDriver(options);
+            if ("firefox".equals(browser)) {
+                var options = new FirefoxOptions();
+                options.setBinary("/home/kristina/firefox");
+                driver = new FirefoxDriver(options);
+            } else if ("chrome".equals(browser)) {
+                var options = new ChromeOptions();
+                options.setBinary("/opt/google/chrome");
+                driver = new ChromeDriver(options);
+            } else {
+                throw new IllegalArgumentException(String.format("Unknown browser %s", browser));
+            }
+
             //testBase.js = (JavascriptExecutor) driver;
             //testBase.vars = new HashMap<String, Object>();
             Runtime.getRuntime().addShutdownHook(new Thread(driver::quit));

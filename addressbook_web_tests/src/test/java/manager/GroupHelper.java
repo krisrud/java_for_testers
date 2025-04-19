@@ -83,4 +83,18 @@ public class GroupHelper extends HelperBase {
         openGroupsPage();
         return manager.driver.findElements(By.name("selected[]")).size();
     }
+
+    public void removeAllGroups() {
+        openGroupsPage();
+        selectAllGroups();
+        removeSelectedGroup();
+    }
+
+    private void selectAllGroups() {
+        var checkboxes = manager.driver.findElements(By.name("selected[]"));
+        for (var checkbox : checkboxes) {
+            checkbox.click();
+
+        }
+    }
 }

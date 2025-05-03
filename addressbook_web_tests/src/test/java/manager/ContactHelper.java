@@ -39,6 +39,7 @@ public class ContactHelper extends HelperBase {
         type(By.name("firstname"), contact.firstname());
         //type(By.name("middlename"), contact.middlename());
         type(By.name("lastname"), contact.lastname());
+        attach(By.name("photo"), contact.photo());
     }
 
     public int getCount() {

@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4c41ccf-6b28-4041-b37f-db121a9e5d61" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_fasterxml_jackson_core_jackson_annotations_2_18_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_fasterxml_jackson_core_jackson_core_2_18_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_fasterxml_jackson_core_jackson_databind_2_18_2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../addressbook_web_tests/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook_web_tests/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbook_web_tests/src/test/java/generator/Generator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook_web_tests/src/test/java/generator/Generator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbook_web_tests/src/test/java/tests/GroupCreationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook_web_tests/src/test/java/tests/GroupCreationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/addressbook_web_tests.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/addressbook_web_tests.main.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/addressbook_web_tests.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/addressbook_web_tests.test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -85,7 +90,7 @@
     "Gradle.GroupRemovalTests.executor": "Run",
     "Gradle.Tests in 'tests'.executor": "Run",
     "Gradle.TriangleTests.executor": "Run",
-    "Gradle.addressbook_web_tests [:generator.Generator.main()].executor": "Debug",
+    "Gradle.addressbook_web_tests [:generator.Generator.main()].executor": "Run",
     "Gradle.sandbox [:ru.stqa.geometry.Geometry.main()].executor": "Run",
     "JUnit.CollectionTests.arrayTests.executor": "Run",
     "JUnit.CollectionTests.listTests.executor": "Run",
@@ -109,6 +114,7 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "last_opened_file_path": "/home/kristina/Рабочий стол/study/java4testers/java_for_testers/addressbook_web_tests",
     "project.structure.last.edited": "Modules",
@@ -119,6 +125,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveMembersDialog.RECENTS_KEY">
+      <recent name="common.CommonFunctions" />
       <recent name="ApplicationManager" />
     </key>
   </component>
@@ -210,7 +217,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="ContactRemovalTests.canRemoveAllContactsAtOnce" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="GroupCreationTests.canCreateMultipleGroups" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/../addressbook_web_tests" />
@@ -223,7 +230,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;tests.ContactRemovalTests.canRemoveAllContactsAtOnce&quot;" />
+            <option value="&quot;tests.GroupCreationTests.canCreateMultipleGroups&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -236,18 +243,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.Generator" />
+      <item itemvalue="Gradle.GroupCreationTests.canCreateMultipleGroups" />
       <item itemvalue="Gradle.ContactCreationTests.canCreateContactWithPhoto" />
       <item itemvalue="Gradle.ContactModificationTests.canModifyContact" />
-      <item itemvalue="Gradle.ContactRemovalTests.canRemoveAllContactsAtOnce" />
       <item itemvalue="Gradle.ContactCreationTests.canCreateMultipleContact" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.GroupCreationTests.canCreateMultipleGroups" />
+        <item itemvalue="Gradle.ContactModificationTests.canModifyContact" />
         <item itemvalue="Application.Generator" />
         <item itemvalue="Gradle.ContactCreationTests.canCreateContactWithPhoto" />
         <item itemvalue="Gradle.ContactCreationTests.canCreateMultipleContact" />
-        <item itemvalue="Gradle.ContactRemovalTests.canRemoveAllContactsAtOnce" />
-        <item itemvalue="Gradle.ContactModificationTests.canModifyContact" />
       </list>
     </recent_temporary>
   </component>

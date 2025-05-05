@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4c41ccf-6b28-4041-b37f-db121a9e5d61" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_fasterxml_jackson_core_jackson_annotations_2_18_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_fasterxml_jackson_core_jackson_core_2_18_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_fasterxml_jackson_core_jackson_databind_2_18_2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../addressbook_web_tests/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook_web_tests/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbook_web_tests/groups.json" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook_web_tests/groups.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../addressbook_web_tests/src/test/java/generator/Generator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook_web_tests/src/test/java/generator/Generator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../addressbook_web_tests/src/test/java/tests/GroupCreationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook_web_tests/src/test/java/tests/GroupCreationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/addressbook_web_tests.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/addressbook_web_tests.main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/addressbook_web_tests.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/addressbook_web_tests.test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -72,7 +67,7 @@
     "Gradle.ContactCreationTests.canCreateContactWithEmptyFields.executor": "Run",
     "Gradle.ContactCreationTests.canCreateContactWithPhoto.executor": "Run",
     "Gradle.ContactCreationTests.canCreateMultipleContact.executor": "Debug",
-    "Gradle.ContactModificationTests.canModifyContact.executor": "Run",
+    "Gradle.ContactModificationTests.canModifyContact.executor": "Debug",
     "Gradle.ContactRemovalTests.canRemoveAllContactsAtOnce.executor": "Run",
     "Gradle.ContactRemovalTests.canRemoveContact.executor": "Run",
     "Gradle.Download Sources.executor": "Run",
@@ -90,7 +85,7 @@
     "Gradle.GroupRemovalTests.executor": "Run",
     "Gradle.Tests in 'tests'.executor": "Run",
     "Gradle.TriangleTests.executor": "Run",
-    "Gradle.addressbook_web_tests [:generator.Generator.main()].executor": "Run",
+    "Gradle.addressbook_web_tests [:generator.Generator.main()].executor": "Debug",
     "Gradle.sandbox [:ru.stqa.geometry.Geometry.main()].executor": "Run",
     "JUnit.CollectionTests.arrayTests.executor": "Run",
     "JUnit.CollectionTests.listTests.executor": "Run",
@@ -133,7 +128,7 @@
     <configuration name="Generator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="generator.Generator" />
       <module name="addressbook_web_tests.test" />
-      <option name="PROGRAM_PARAMETERS" value="--type groups --output groups.json --format json --count 3" />
+      <option name="PROGRAM_PARAMETERS" value="--type groups --output groups.yaml --format yaml --count 3" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../addressbook_web_tests" />
       <extension name="coverage">
         <pattern>
@@ -250,8 +245,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.GroupCreationTests.canCreateMultipleGroups" />
         <item itemvalue="Gradle.ContactModificationTests.canModifyContact" />
+        <item itemvalue="Gradle.GroupCreationTests.canCreateMultipleGroups" />
         <item itemvalue="Application.Generator" />
         <item itemvalue="Gradle.ContactCreationTests.canCreateContactWithPhoto" />
         <item itemvalue="Gradle.ContactCreationTests.canCreateMultipleContact" />
@@ -267,5 +262,16 @@
       <updated>1742629451898</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/../addressbook_web_tests/src/test/java/manager/ContactHelper.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

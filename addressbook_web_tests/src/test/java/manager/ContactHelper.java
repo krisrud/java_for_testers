@@ -92,15 +92,15 @@ public class ContactHelper extends HelperBase {
 
     public void modifyContact(ContactData contact, ContactData modifiedContact) {
         returnToHomePage();
-        selectContact(contact);
-        initContactModification();
+        //selectContact(contact);
+        initContactModification(contact);
         fillContactForm(modifiedContact);
         submitContactModification();
         returnToHomePage();
     }
 
-    private void initContactModification() {
-        click(By.cssSelector("[title=\"Edit\"]"));
+    private void initContactModification(ContactData contact) {
+        click(By.cssSelector(String.format("a[href='edit.php?id=%s']", contact.id())));
 
     }
 

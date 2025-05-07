@@ -8,18 +8,22 @@ import org.openqa.selenium.chromium.ChromiumOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
+import java.util.Properties;
+
 public class ApplicationManager {
     protected WebDriver driver;
     private LoginHelper session;
     private GroupHelper groups;
     private  ContactHelper contacts;
+    private Properties properties;
 
 
-    public void init(String browser) {
+    public void init(String browser, Properties properties) {
+        this.properties = properties;
         if (driver == null) {
             if ("firefox".equals(browser)) {
                 var options = new FirefoxOptions();
-                options.setBinary("/home/kristina/firefox");
+                options.setBinary(properties.getProperty("local.firefox"));
                 driver = new FirefoxDriver(options);
             } else if ("chrome".equals(browser)) {
                 //var options = new ChromeOptions();
@@ -27,7 +31,7 @@ public class ApplicationManager {
                 //driver = new ChromeDriver(options);
                 ChromeOptions options = new ChromeOptions();
 
-                System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
+                System.setProperty(properties.getProperty("local.chrome"), properties.getProperty("local.chromedriver"));
 
                 //options.addArguments("--headless");
                 //options.addArguments("--no-sandbox");
@@ -45,9 +49,9 @@ public class ApplicationManager {
             //testBase.js = (JavascriptExecutor) driver;
             //testBase.vars = new HashMap<String, Object>();
             Runtime.getRuntime().addShutdownHook(new Thread(driver::quit));
-            driver.get("http://localhost/addressbook/index.php");
+            driver.get(properties.getProperty("web.baseUrl"));
             driver.manage().window().setSize(new Dimension(1850, 1053));
-            session().login("admin", "secret");
+            session().login(properties.getProperty("web.username"), properties.getProperty("web.password"));
         }
     }
 

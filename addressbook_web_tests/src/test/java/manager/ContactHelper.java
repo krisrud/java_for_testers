@@ -14,7 +14,7 @@ public class ContactHelper extends HelperBase {
     }
 
     public void createContact(ContactData contact) {
-        //returnToHomePage();
+        openHomePage();
         initContactCreation();
         fillContactForm(contact);
         submitContactCreation();
@@ -32,6 +32,9 @@ public class ContactHelper extends HelperBase {
     }
 
     private void returnToHomePage() {
+        click(By.linkText("home page"));
+    }
+    private void openHomePage() {
         click(By.linkText("home"));
     }
 
@@ -43,12 +46,12 @@ public class ContactHelper extends HelperBase {
     }
 
     public int getCount() {
-        returnToHomePage();
+        openHomePage();
         return manager.driver.findElements(By.name("selected[]")).size();
     }
 
     public void removeContact(ContactData contact) {
-        returnToHomePage();
+        openHomePage();
         selectContact(contact);
         removeSelectedContact();
         returnToHomePage();
@@ -63,7 +66,7 @@ public class ContactHelper extends HelperBase {
     }
 
     public void removeAllContacts() {
-        returnToHomePage();
+        openHomePage();
         selectAllContacts();
         removeSelectedContact();
     }
@@ -77,7 +80,7 @@ public class ContactHelper extends HelperBase {
     }
 
     public List<ContactData> getList() {
-        returnToHomePage();
+        openHomePage();
         var contacts = new ArrayList<ContactData>();
         var trs = manager.driver.findElements(By.cssSelector("tr[name='entry']"));
         for (var tr : trs) {
@@ -91,7 +94,7 @@ public class ContactHelper extends HelperBase {
     }
 
     public void modifyContact(ContactData contact, ContactData modifiedContact) {
-        returnToHomePage();
+        openHomePage();
         //selectContact(contact);
         initContactModification(contact);
         fillContactForm(modifiedContact);

@@ -7,6 +7,7 @@ import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLMapper;
 import common.CommonFunctions;
+import model.ContactData;
 import model.GroupData;
 
 import java.io.File;
@@ -75,7 +76,17 @@ public class Generator {
     }
 
     private Object generateContacts() {
-        return null;
+        var result = new ArrayList<ContactData>();
+        result.add(new ContactData("", "firstname", "middlename", "lastname", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""));
+        result.add(new ContactData("", "", "middlename", "lastname", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""));
+        result.add(new ContactData("", "firstname", "", "lastname", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""));
+        result.add(new ContactData("", "firstname", "middlename", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""));
+        result.add(new ContactData("", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""));
+        //result.add(new ContactData().withPhoto("src/test/resources/images/avatar.png"));
+        for (int i = 0; i < 5; i++) {
+            result.add(new ContactData("", CommonFunctions.randomString(i*10), CommonFunctions.randomString(i*10), CommonFunctions.randomString(i*10), CommonFunctions.randomString(i*10), "", CommonFunctions.randomString(i*10), CommonFunctions.randomString(i*10), CommonFunctions.randomString(i*10),"", "", "", "", CommonFunctions.randomString(i*10), CommonFunctions.randomString(i*10), CommonFunctions.randomString(i*10), CommonFunctions.randomString(i*10),"", "", "", "", "", "", ""));
+        }
+        return result;
     }
 
     private Object generateGroups() {

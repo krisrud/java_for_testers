@@ -49,4 +49,19 @@ public class ContactCreationTests extends TestBase {
         app.contacts().createContact(new ContactData().withPhoto(randomFile("src/test/resources/images")));
     }
 
+    @Test
+    void canCreateContactInGroup() {
+        var contact = new ContactData()
+                .withNames(CommonFunctions.randomString(10), CommonFunctions.randomString(10));
+        if (app.hbm().getGroupCount() == 0) {
+            app.hbm().createGroup(new GroupData("", "name", "name header", "name footer"));
+        }
+        var group = app.hbm().getGroupList().get(0);
+
+        var oldRelated = app.hbm().getContactsInGroup(group);
+        app.contacts().createContact(contact, group);
+        var newRelated = app.hbm().getContactsInGroup(group);
+        Assertions.assertEquals(oldRelated.size() + 1, newRelated.size());
+    }
+
 }

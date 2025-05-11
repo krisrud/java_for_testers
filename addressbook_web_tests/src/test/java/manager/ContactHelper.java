@@ -19,7 +19,7 @@ public class ContactHelper extends HelperBase {
         initContactCreation();
         fillContactForm(contact);
         submitContactCreation();
-        returnToHomePage();
+        //returnToHomePage();
     }
 
     public void createContact(ContactData contact, GroupData group) {
@@ -68,7 +68,7 @@ public class ContactHelper extends HelperBase {
         openHomePage();
         selectContact(contact);
         removeSelectedContact();
-        returnToHomePage();
+        //returnToHomePage();
     }
 
     private void selectContact(ContactData contact) {

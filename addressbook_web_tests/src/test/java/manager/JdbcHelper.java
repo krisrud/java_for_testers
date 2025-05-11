@@ -1,5 +1,6 @@
 package manager;
 
+import model.ContactData;
 import model.GroupData;
 
 import java.sql.Driver;
@@ -44,4 +45,40 @@ public class JdbcHelper extends HelperBase {
             throw new RuntimeException(e);
         }
     }
+
+    public ArrayList<ContactData> getContactsWithoutGroup() {
+        var contacts = new ArrayList<ContactData>();
+        try (var conn = DriverManager.getConnection("jdbc:mysql://localhost/addressbook", "root", "");
+             var statement = conn.createStatement();
+             var result = statement.executeQuery(
+                     "SELECT * FROM addressbook ab LEFT JOIN address_in_groups ag ON ab.id = ag.id WHERE ag.id IS NULL ")) {
+            while (result.next()) {
+                contacts.add(new ContactData().withId(result.getString("id")));
+            }
+            return contacts;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public ArrayList<GroupData> getGroupsWithContacts() {
+        var groups = new ArrayList<GroupData>();
+        try (var conn = DriverManager.getConnection("jdbc:mysql://localhost/addressbook", "root", "");
+             var statement = conn.createStatement();
+             var result = statement.executeQuery(
+                     "SELECT gl.group_id FROM `group_list` gl JOIN address_in_groups ag ON gl.group_id = ag.group_id WHERE ag.id IS NOT NULL")) {
+            while (result.next()) {
+                groups.add(new GroupData()
+                        .withID(result.getString("group_id")))
+                        //.withName(result.getString("group_name"))
+                        //.withHeader(result.getString("group_header"))
+                        //.withFooter(result.getString("group_footer")))
+                        ;}
+            return groups;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+
 }

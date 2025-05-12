@@ -14,6 +14,9 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.function.Supplier;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Generator {
 
@@ -75,30 +78,32 @@ public class Generator {
         }
     }
 
+    private  Object generateData(Supplier<Object> dataSupplier) {
+        return Stream.generate(dataSupplier).limit(count).collect(Collectors.toList());
+    }
+
     private Object generateContacts() {
-        var result = new ArrayList<ContactData>();
-        result.add(new ContactData("", "firstname", "middlename", "lastname", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""));
-        result.add(new ContactData("", "", "middlename", "lastname", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""));
-        result.add(new ContactData("", "firstname", "", "lastname", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""));
-        result.add(new ContactData("", "firstname", "middlename", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""));
-        result.add(new ContactData("", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""));
-        //result.add(new ContactData().withPhoto("src/test/resources/images/avatar.png"));
-        for (int i = 0; i < 5; i++) {
-            result.add(new ContactData("", CommonFunctions.randomString(i*10), CommonFunctions.randomString(i*10), CommonFunctions.randomString(i*10), CommonFunctions.randomString(i*10), "", CommonFunctions.randomString(i*10), CommonFunctions.randomString(i*10), CommonFunctions.randomString(i*10),"", "", "", "", CommonFunctions.randomString(i*10), CommonFunctions.randomString(i*10), CommonFunctions.randomString(i*10), CommonFunctions.randomString(i*10),"", "", "", "", "", "", ""));
-        }
-        return result;
+        return  generateData(() -> new ContactData()
+                        .withNames(CommonFunctions.randomString(10),CommonFunctions.randomString(10)));
+
+//        var result = new ArrayList<ContactData>();
+//        result.add(new ContactData("", "firstname", "middlename", "lastname", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""));
+//        result.add(new ContactData("", "", "middlename", "lastname", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""));
+//        result.add(new ContactData("", "firstname", "", "lastname", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""));
+//        result.add(new ContactData("", "firstname", "middlename", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""));
+//        result.add(new ContactData("", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""));
+//        //result.add(new ContactData().withPhoto("src/test/resources/images/avatar.png"));
+//        for (int i = 0; i < 5; i++) {
+//            result.add(new ContactData("", CommonFunctions.randomString(i*10), CommonFunctions.randomString(i*10), CommonFunctions.randomString(i*10), CommonFunctions.randomString(i*10), "", CommonFunctions.randomString(i*10), CommonFunctions.randomString(i*10), CommonFunctions.randomString(i*10),"", "", "", "", CommonFunctions.randomString(i*10), CommonFunctions.randomString(i*10), CommonFunctions.randomString(i*10), CommonFunctions.randomString(i*10),"", "", "", "", "", "", ""));
+//        }
+//        return result;
     }
 
     private Object generateGroups() {
-        var result = new ArrayList<GroupData>();
-        for (int i = 0; i < count; i++) {
-            result.add(new GroupData()
-                    //.withID(randomString(i*10))
-                    .withName(CommonFunctions.randomString(i*10))
-                    .withHeader(CommonFunctions.randomString(i*10))
-                    .withFooter(CommonFunctions.randomString(i*10)));
-        }
-        return result;
+        return  generateData(() -> new GroupData()
+                .withName(CommonFunctions.randomString(10))
+                .withHeader(CommonFunctions.randomString(10))
+                .withFooter(CommonFunctions.randomString(10)));
     }
 
 }

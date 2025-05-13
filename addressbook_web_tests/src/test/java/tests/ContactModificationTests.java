@@ -16,7 +16,7 @@ public class ContactModificationTests extends TestBase {
         if (app.hbm().getContactCount() == 0)  {
             app.hbm().createContact(new ContactData("", "1", "2", "3", "4", "randomFile(\"src/test/resources/images\")", "5", "6",
                     "7", "8", "9", "10", "11", "12", "13", "14", "15",
-                    "16", "June", "1900", "17", "June", "2000", "", ""));
+                    "16", "June", "1900", "17", "June", "2000", ""));
         }
         var oldContacts = app.hbm().getContactList();
         var rnd = new Random();
@@ -42,7 +42,7 @@ public class ContactModificationTests extends TestBase {
         if (app.hbm().getContactCount() == 0 || app.jdbc().getContactsWithoutGroup().size() == 0)  {
             app.hbm().createContact(new ContactData("", "1", "2", "3", "4", "randomFile(\"src/test/resources/images\")", "5", "6",
                     "7", "8", "9", "10", "11", "12", "13", "14", "15",
-                    "16", "June", "1900", "17", "June", "2000", "", ""));
+                    "16", "June", "1900", "17", "June", "2000", ""));
         }
         var grouplist = app.hbm().getGroupList();
         var rnd = new Random();

@@ -9,8 +9,10 @@
       <change beforePath="$PROJECT_DIR$/../addressbook_web_tests/src/test/java/manager/HibernateHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook_web_tests/src/test/java/manager/HibernateHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../addressbook_web_tests/src/test/java/manager/hbm/ContactRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook_web_tests/src/test/java/manager/hbm/ContactRecord.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../addressbook_web_tests/src/test/java/model/ContactData.java" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook_web_tests/src/test/java/model/ContactData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbook_web_tests/src/test/java/tests/ContactInfoTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook_web_tests/src/test/java/tests/ContactInfoTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../addressbook_web_tests/src/test/java/tests/ContactModificationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook_web_tests/src/test/java/tests/ContactModificationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../addressbook_web_tests/src/test/java/tests/ContactRemovalTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook_web_tests/src/test/java/tests/ContactRemovalTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hibernate_orm_hibernate_core_6_3_0_CR1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hibernate_orm_hibernate_core_6_3_0_CR1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -280,5 +282,10 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="GradleRunConfiguration">
+        <watch expression="phones.get(contact.id())" language="JAVA" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

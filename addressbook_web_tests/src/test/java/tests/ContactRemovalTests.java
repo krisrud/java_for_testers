@@ -14,7 +14,7 @@ public class ContactRemovalTests extends TestBase {
         if (app.hbm().getContactCount() == 0) {
             app.hbm().createContact(new ContactData("", "1", "2", "3", "4", "randomFile(\"src/test/resources/images\")", "5", "6",
                     "7", "8", "9", "10", "11", "12", "13", "14", "15",
-                    "16", "June", "1900", "17", "June", "2000", "", ""));
+                    "16", "June", "1900", "17", "June", "2000", ""));
         }
 //        int contactsCount = app.contacts().getCount();
 //        app.contacts().removeContact();

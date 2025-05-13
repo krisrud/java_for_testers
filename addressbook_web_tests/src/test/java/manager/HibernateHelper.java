@@ -53,10 +53,14 @@ public class HibernateHelper extends HelperBase {
     }
 
     private static ContactData convert(ContactRecord record) {
-        return new ContactData()
-                .withId("" + record.id)
-                .withNames(record.firstname, record.lastname)
-                .withSecondaryPhone(record.phone2);
+        String bday = "" + record.bday;
+        String aday = "" + record.aday;
+        return new ContactData("" + record.id, record.firstname, record.middlename, record.lastname, record.nickname,
+                record.photo, record.title, record.company, record.address, record.home, record.mobile, record.work, record.fax,
+                record.email, record.email2, record.email3, record.homepage, bday, record.bmonth, record.byear, aday, record.amonth, record.ayear, "")
+                //.withId("" + record.id)
+                //.withNames(record.firstname, record.lastname)
+        ;
     }
 
     private static ContactRecord convert(ContactData data) {
@@ -66,7 +70,7 @@ public class HibernateHelper extends HelperBase {
         }
         return new ContactRecord(Integer.parseInt(id), data.firstname(), data.middlename(), data.lastname(),   data.nickname(),  data.company(),
                 data.title(),  data.address(),  data.home(),  data.mobile(),  data.work(),  data.fax(),  data.email(),
-                data.email2(),  data.email3(),  data.homepage(),  Integer.parseInt(data.bday()), data.bmonth(), data.byear(), Integer.parseInt(data.aday()), data.amonth(), data.ayear(), data.phone2());
+                data.email2(),  data.email3(),  data.homepage(),  Integer.parseInt(data.bday()), data.bmonth(), data.byear(), Integer.parseInt(data.aday()), data.amonth(), data.ayear());
     }
 
     public List<GroupData> getGroupList() {

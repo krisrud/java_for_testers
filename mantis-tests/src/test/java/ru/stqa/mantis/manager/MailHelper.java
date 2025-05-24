@@ -53,7 +53,7 @@ public List<MailMessage> receive(String username, String password, Duration dura
     private static Folder getInbox(String username, String password) {
 
         try {
-            Session session = Session.getInstance(new Properties());
+            var session = Session.getInstance(new Properties());
             Store store = session.getStore("pop3");
             store.connect("localhost", username, password);
             var inbox = store.getFolder("INBOX");

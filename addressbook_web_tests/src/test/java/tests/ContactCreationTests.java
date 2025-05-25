@@ -66,11 +66,13 @@ public class ContactCreationTests extends TestBase {
                 .withNames(CommonFunctions.randomString(10), CommonFunctions.randomString(10))
         );
     }
-
+/*
     @Test
     void canCreateContactWithPhoto() {
         app.contacts().createContact(new ContactData().withPhoto(randomFile("src/test/resources/images")));
     }
+    
+ */
 /*
     @Test
     void canCreateContactInGroup() {

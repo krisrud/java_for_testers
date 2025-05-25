@@ -71,7 +71,7 @@ public class ContactCreationTests extends TestBase {
     void canCreateContactWithPhoto() {
         app.contacts().createContact(new ContactData().withPhoto(randomFile("src/test/resources/images")));
     }
-    
+
  */
 /*
     @Test

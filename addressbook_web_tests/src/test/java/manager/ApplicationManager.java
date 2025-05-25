@@ -7,7 +7,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chromium.ChromiumOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.Properties;
 
 public class ApplicationManager {
@@ -20,20 +23,31 @@ public class ApplicationManager {
     private Properties properties;
 
 
-    public void init(String browser, Properties properties) {
+    public void init(String browser, Properties properties) throws MalformedURLException {
         this.properties = properties;
         if (driver == null) {
+            var seleniumServer = properties.getProperty("seleniumServer");
             if ("firefox".equals(browser)) {
-                var options = new FirefoxOptions();
-                options.setBinary(properties.getProperty("local.firefox"));
-                driver = new FirefoxDriver(options);
+                if (seleniumServer != null) {
+                    driver = new RemoteWebDriver(new URL(seleniumServer), new FirefoxOptions());
+                } else {
+                    var options = new FirefoxOptions();
+                    options.setBinary(properties.getProperty("local.firefox"));
+                    driver = new FirefoxDriver(options);
+                }
+
             } else if ("chrome".equals(browser)) {
-                //var options = new ChromeOptions();
+                if (seleniumServer != null) {
+                    driver = new RemoteWebDriver(new URL(seleniumServer), new ChromeOptions());
+                } else {
+                    ChromeOptions options = new ChromeOptions();
+                    System.setProperty(properties.getProperty("local.chrome"), properties.getProperty("local.chromedriver"));
+                    driver = new ChromeDriver(options);
+                }
+                    //var options = new ChromeOptions();
                 //options.setBinary("/opt/google/chrome");
                 //driver = new ChromeDriver(options);
-                ChromeOptions options = new ChromeOptions();
 
-                System.setProperty(properties.getProperty("local.chrome"), properties.getProperty("local.chromedriver"));
 
                 //options.addArguments("--headless");
                 //options.addArguments("--no-sandbox");
@@ -41,7 +55,7 @@ public class ApplicationManager {
                 //options.addArguments("disable-infobars");
                 //options.addArguments("--disable-extensions");
 
-                driver = new ChromeDriver(options);
+
                 //driver.implicitly_wait(10);
 
             } else {

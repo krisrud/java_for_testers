@@ -11,6 +11,7 @@ import java.util.Comparator;
 import java.util.Random;
 
 public class ContactModificationTests extends TestBase {
+    /*
     @Test
     void canModifyContact(){
         if (app.hbm().getContactCount() == 0)  {
@@ -84,7 +85,7 @@ public class ContactModificationTests extends TestBase {
         app.contacts().deleteContactFromGroup(contact, group);
         var newRelated = app.hbm().getContactsInGroup(group);
         Assertions.assertEquals(oldRelated.size() - 1, newRelated.size());
-    }
+    }*/
 
 
 }

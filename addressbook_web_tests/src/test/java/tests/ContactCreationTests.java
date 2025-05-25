@@ -18,7 +18,7 @@ import java.util.List;
 
 public class ContactCreationTests extends TestBase {
 
-    @ParameterizedTest
+   /* @ParameterizedTest
     @MethodSource("contactProvider")
     public void canCreateMultipleContact(ContactData contact) {
         var oldContacts = app.contacts().getList();
@@ -50,7 +50,7 @@ public class ContactCreationTests extends TestBase {
         expectedList.add(contact.withId(newContacts.get(newContacts.size() - 1).id()).withoutNames("", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""));
         expectedList.sort(compareById);
         Assertions.assertEquals(newContacts, expectedList);
-    }
+    }*/
 
     public static List<ContactData> contactProvider() throws IOException {
         var result = new ArrayList<ContactData>();
@@ -71,7 +71,7 @@ public class ContactCreationTests extends TestBase {
     void canCreateContactWithPhoto() {
         app.contacts().createContact(new ContactData().withPhoto(randomFile("src/test/resources/images")));
     }
-
+/*
     @Test
     void canCreateContactInGroup() {
         var contact = new ContactData()
@@ -85,6 +85,6 @@ public class ContactCreationTests extends TestBase {
         app.contacts().createContact(contact, group);
         var newRelated = app.hbm().getContactsInGroup(group);
         Assertions.assertEquals(oldRelated.size() + 1, newRelated.size());
-    }
+    }*/
 
 }

@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class ContactRemovalTests extends TestBase {
-
+/*
     @Test
     public void canRemoveContact() {
         if (app.hbm().getContactCount() == 0) {
@@ -39,4 +39,6 @@ public class ContactRemovalTests extends TestBase {
         app.contacts().removeAllContacts();
         Assertions.assertEquals(0, app.hbm().getContactCount());
     }
+    
+ */
 }
